@@ -36,6 +36,8 @@ constraint fk_pessoa_telefone foreign key(id_pessoa) references pessoa(id),
 constraint fk_telefone_hpessoa foreign key(id_telefone) references telefone(id)
 );
 
+#create table deadend_pessoa
+
 create table conta_login(
 id int not null auto_increment,
 email varchar(90) not null,
@@ -52,6 +54,13 @@ id_pessoa int not null,
 pendencia tinyint not null,
 constraint pk_paciente primary key(id),
 constraint fk_pessoa_is_paciente foreign key (id_pessoa) references pessoa(id)
+);
+
+create table atendente(
+id int not null auto_increment,
+id_pessoa int,
+constraint pk_atendente primary key(id),
+constraint fk_pessoa_is_atendente foreign key(id_pessoa) references pessoa(id)
 );
 
 create table doutor(
@@ -72,6 +81,21 @@ horario time not null,
 constraint pk_consulta primary key (id),
 constraint fk_consulta_of_paciente foreign key(id_paciente) references paciente(id),
 constraint fk_consulta_from_doutor foreign key(id_doutor) references doutor(id)
+);
+
+create table cancelamento(
+id int not null auto_increment,
+motivo varchar (255) not null,
+data_cancelamento date not null,
+hora_cancelamento time not null,
+data_reagendamento date not null,
+hora_reagendamento time not null,
+id_consulta int,
+id_paciente int,
+id_doutor int,
+constraint pk_cancelamento primary key(id),
+constraint fk_cancelamento_paciente foreign key (id_paciente) references paciente(id),
+constraint fk_cancelamento_doutor foreign key (id_doutor) references doutor(id)
 );
 
 create table pgto(
