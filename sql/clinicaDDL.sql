@@ -1,5 +1,5 @@
 #drop database clinica;
-#create database clinica;
+create database clinica;
 use clinica;
 
 create table endereco(
@@ -36,8 +36,6 @@ constraint fk_pessoa_telefone foreign key(id_pessoa) references pessoa(id),
 constraint fk_telefone_hpessoa foreign key(id_telefone) references telefone(id)
 );
 
-#create table deadend_pessoa
-
 create table conta_login(
 id int not null auto_increment,
 email varchar(90) not null,
@@ -70,6 +68,16 @@ especialidade varchar(40) not null,
 crm bigint not null,
 constraint pk_doutor primary key (id),
 constraint fk_doutor_is_pessoa foreign key (id_pessoa) references pessoa(id)
+);
+
+create table clinica(
+id int not null auto_increment,
+sigla varchar(6) not null,
+nome varchar(50) not null,
+cnpj bigint not null,
+cep int,
+constraint pk_clinica primary key(id),
+constraint fk_clinica_has_cep foreign key (cep) references endereco(cep)
 );
 
 create table consulta(
@@ -107,4 +115,9 @@ forma_pgto enum('Dinheiro','Débito') not null default 'Dinheiro',
 id_consulta int not null,
 constraint pk_pgto primary key (id),
 constraint fk_pagamento_from_consulta foreign key(id_consulta) references consulta(id)
+);
+
+#Tabelas de arquivo morto
+create table deadend_pessoa(
+id int not null auto_increment,
 );
