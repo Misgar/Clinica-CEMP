@@ -118,6 +118,42 @@ constraint fk_pagamento_from_consulta foreign key(id_consulta) references consul
 );
 
 #Tabelas de arquivo morto
-create table deadend_pessoa(
-id int not null auto_increment,
+create table deactivated_pessoa(
+id int,
+nome varchar(20),
+sobrenome varchar(100),
+rg char(9),
+cpf bigint(11),
+endereco_cep int (8),
+constraint fk_pessoa_desativada foreign key(id) references pessoa(id)
+);
+
+create table deactivated_contalogin(
+id int,
+email varchar(50),
+senha varchar(50),
+lembrete_senha varchar (45),
+id_pessoa int,
+constraint fk_login_desativado foreign key(id) references conta_login(id)
+);
+
+create table deactivated_paciente(
+id int,
+id_pessoa int,
+pendencia tinyint,
+constraint fk_paciente_desativado foreign key (id) references paciente(id)
+);
+
+create table deactivated_atendente(
+id int,
+id_pessoa int,
+constraint fk_atendente_desativada foreign key(id) references atendente(id)
+);
+
+create table deactivated_doutor(
+id int,
+id_pessoa int,
+crm bigint,
+especialidade varchar(45),
+constraint fk_doutor_desativado foreign key(id) references doutor(id)
 );
