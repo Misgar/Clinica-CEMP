@@ -29,6 +29,9 @@ data_nascimento date not null,
 constraint pk_pessoa primary key (id)
 );
 
+alter table pessoa add column endereco_cep int;
+alter table pessoa add constraint fk_endereco_pessoa foreign key(endereco_cep) references endereco(cep);
+
 create table pessoa_telefone(
 id_pessoa int not null,
 id_telefone int not null,
@@ -124,6 +127,7 @@ nome varchar(20),
 sobrenome varchar(100),
 rg char(9),
 cpf bigint(11),
+data_nascimento date,
 endereco_cep int (8),
 constraint fk_pessoa_desativada foreign key(id) references pessoa(id)
 );
