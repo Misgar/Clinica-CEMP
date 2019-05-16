@@ -3,6 +3,7 @@ create database clinica;
 use clinica;
 
 create table endereco(
+id int not null,
 cep int(8) not null,
 logradouro varchar(100) not null,
 bairro varchar(50) not null,
@@ -26,17 +27,17 @@ sobrenome varchar (255) not null,
 rg varchar(9) not null,
 cpf bigint(11) not null,
 data_nascimento date not null,
+cep int,
+numero int(5),
+constraint fk_endereco_pessoa foreign key(cep) references endereco(cep),
 constraint pk_pessoa primary key (id)
 );
-
-alter table pessoa add column endereco_cep int;
-alter table pessoa add constraint fk_endereco_pessoa foreign key(endereco_cep) references endereco(cep);
 
 create table pessoa_telefone(
 id_pessoa int not null,
 id_telefone int not null,
 constraint fk_pessoa_telefone foreign key(id_pessoa) references pessoa(id),
-constraint fk_telefone_hpessoa foreign key(id_telefone) references telefone(id)
+constraint fk_telefone_pessoa foreign key(id_telefone) references telefone(id)
 );
 
 create table conta_login(
