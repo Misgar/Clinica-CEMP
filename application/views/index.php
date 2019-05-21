@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt" dir="pt-br">
   <head>
-    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="<?php base url('css/') ?>">
     <title></title>
   </head>
   <body>
