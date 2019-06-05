@@ -8,7 +8,11 @@
     <title></title>
   </head>
   <body>
-    <?php require_once('navbar.php')  ?>
+    <?php require_once('navbar.php');
+      require_once('sidebar.php');
+    ?>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
