@@ -1,7 +1,7 @@
 <!-- arquivo da barra de navegação, puxado por require-->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Clinica Cemp</a>
+  <a class="navbar-brand" href="<?php echo base_url(); ?>">Clinica Cemp</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,8 +13,8 @@
           Consultas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="http://127.0.0.1/AgendaConsulta.php"  >Marcar Consulta</a>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConsulta">Verificar Consultas Marcadas</a>
+          <a class="dropdown-item" href="<?php echo base_url('index.php/controlleragenda/form_agendamento');?>">Marcar Consulta</a>
+          <a class="dropdown-item" href="<?php echo base_url('index.php/controlleragenda/consulta_dadosagendamento');?>" data-toggle="modal" data-target="#modalConsulta">Verificar Consultas Marcadas</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Algo mais aqui</a>
         </div>
