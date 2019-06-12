@@ -16,7 +16,7 @@
       $dados['CPF'] = $_POST['cpf'];
 
       $this->load->database();
-      $this->load->view('listarconsultas');
+      $this->load->view('listaconsultas');
     }
   }
 
