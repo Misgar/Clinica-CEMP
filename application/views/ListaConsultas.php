@@ -9,38 +9,72 @@
   </head>
   <body>
     <?php require_once('navbar.php'); # ONDE ESTÃO MODAL PARA PESQUISA E CONTEUDO (CRUD)
-      require_once('sidebar.php'); # SEM USO NO CRUD ATÉ O MOMENTO
+     # SEM USO NO CRUD ATÉ O MOMENTO
     ?>
+
+    <!-- CODIGO TABELA QUE DEVERA SER USADO COM FOR EACH -->
+    <!-- NECESSARIO PASSAR O ID USADO NO BANCO PARA OS LINKS DE ALTERAR E EXCLUIR -->
     <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
       <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
+      <td>EXEMPLO</td>
       <td>Otto</td>
-      <td>@mdo</td>
+      <td>EX</td>
+      <td> <a href="#" data-target="#ModalAlterar" data-toggle="modal"> Alterar </a> <td>
+        <td> <a href="#" data-target="#ModalExcluir" data-toggle="modal"> Excluir </a> <td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
   </tbody>
 </table>
+
+<div class="modal" tabindex="-1" role="dialog" id="ModalAlterar">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="ModalExcluir">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">Confirmar e Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
