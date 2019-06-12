@@ -18,9 +18,9 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Sobrenome</th>
+      <th scope="col">Consulta</th>
     </tr>
   </thead>
   <tbody>
@@ -29,8 +29,8 @@
       <td>EXEMPLO</td>
       <td>Otto</td>
       <td>EX</td>
-      <td> <a href="#" data-target="#ModalAlterar" data-toggle="modal"> Alterar </a> <td>
-        <td> <a href="#" data-target="#ModalExcluir" data-toggle="modal"> Excluir </a> <td>
+      <td> <a href="#" data-target="#ModalAlterar" data-toggle="modal" class="text-success"> Alterar </a> <td>
+        <td> <a href="#" data-target="#ModalExcluir" data-toggle="modal" class="text-danger"> Excluir </a> <td>
     </tr>
 
   </tbody>
@@ -66,11 +66,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <p class="col-12">Confirma exclusão?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger">Confirmar e Excluir</button>
+        <button type="button" class="btn btn-danger col-3">Confirmar e Excluir</button>
       </div>
     </div>
   </div>
