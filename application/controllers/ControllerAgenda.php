@@ -11,6 +11,13 @@
     public function consulta_dadosagendamento(){
       $this->load->view('dadosagendamento');
     }
+
+    public function enviaCpf(){
+      $dados['CPF'] = $_POST['cpf'];
+
+      $this->load->database();
+      $this->load->view('listarconsultas');
+    }
   }
 
   ?>

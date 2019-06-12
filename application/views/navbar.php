@@ -45,14 +45,14 @@
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="CPF" class="sr-only">Insira cpf para pesquisa</label>
-                  <input type="text" class="form-control" id="CPF" placeholder="Insira CPF para pesquisar">
+                  <input type="text" class="form-control" id="CPF" placeholder="Insira CPF para pesquisar" name="cpf">
                 </div>
 
           </div>
 
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="submit" class="btn btn-primary" method="GET">Consultar</button> <!-- BOTAO PARA ENVIAR VALOR DO FORMULARIO -->
+                  <button type="submit" class="btn btn-primary" method="POST">Consultar</button> <!-- BOTAO PARA ENVIAR VALOR DO FORMULARIO -->
                 </div>
           </form>
 
