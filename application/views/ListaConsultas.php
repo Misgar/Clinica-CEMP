@@ -40,18 +40,38 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title">Alterar dados</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+
+        <form action="#" method="POST">
+          <div class="form-row align-items-center">
+            <div class="col-sm-3 my-1">
+              <label class="sr-only" for="inlineFormInputName">Nome</label>
+              <input type="text" class="form-control" id="inlineFormInputName" placeholder="Nome">
+            </div>
+            <div class="row-sm-3 my-1">
+              <label class="sr-only" for="inlineFormInputGroupUsername">Sobrenome</label>
+              <div class="input-group">
+
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Sobrenome">
+              </div>
+            </div>
+            <div class="col-auto my-1">
+              <button type="submit" class="btn btn-primary">Alterar</button>
+            </div>
+          </div>
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
       </div>
+      </form>
     </div>
   </div>
 </div>
