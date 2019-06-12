@@ -12,11 +12,13 @@
       $this->load->view('dadosagendamento');
     }
 
-    public function enviaCpf(){
+    public function enviacpf(){
       $dados['CPF'] = $_POST['cpf'];
 
       $this->load->database();
-      $this->load->view('listaconsultas');
+      $this->load->model('ModelConsulta','objConsulta');
+      $listando['lista'] = $this->objConsulta->exibir_consultas($dados);
+      $this->load->view('listaconsultas', $listando);
     }
   }
 

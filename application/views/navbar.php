@@ -37,7 +37,7 @@
           </div>
           <!-- FORM PARA PEGAR CPF E PESQUISAR -->
           <div class="modal-body">
-            <form class="form-inline">
+            <form class="form-inline" action="<?php echo base_url('index.php/controlleragenda/enviacpf') ?>" method="POST">
 
                 <div class="form-group mb-2">
                   <label  class="sr-only">CPF</label>
